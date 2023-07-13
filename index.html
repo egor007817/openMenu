@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Menu</title>
+</head>
+<body>
+    <div id="div1">
+        <button id="div2" onclick="openmenu()">
+            >
+        </button>
+        <div id="div3">
+            <div id="divv1" class="di">Перейти на главную</div>
+            <div id="divv2" class="divv">Перейти на форум</div>
+            <div id="divv3" class="divv">Перейти на рынок</div>
+            <div id="divv4" class="divv">Новости</div>
+            <div id="divv5" class="divv">Иформация о нас</div>
+        </div>
+        <button id="div5" onclick="closeMenu()">
+        Скрыть</button>
+        <div class="menu1">M</div>
+        <div class="menu">E</div>
+        <div class="menu">N</div>
+        <div class="menu">U</div>
+    </div>
+    <style>
+        .menu1{
+            color: rgb(223, 128, 186);
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 50px;
+            background-color: rgb(207, 226, 245);
+            width: 50px;
+        }
+        .menu{
+            color: rgb(223, 128, 186);
+            margin-top: 80px;
+            font-weight: bold;
+            font-size: 50px;
+            background-color: rgb(207, 226, 245);
+            width: 50px;
+        }
+        #divv1:hover{
+            background-color: rgb(129, 168, 199);
+            cursor: pointer;
+            font-size: 50px;
+            color: aqua;
+        }
+        .divv:hover{
+            background-color: rgb(129, 168, 199);
+            cursor: pointer;
+            font-size: 50px;
+            color: aqua;
+        }
+        #divv1{
+            width: 800px;
+            height: 118px;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        .divv{
+            width: 800px;
+            height: 118px;
+            color: white;
+            border-top: 1px solid rgb(15, 68, 110);
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        *{
+            margin: 0px;
+        }
+        #div1{
+            width: 60px;
+            height: 600px;
+            background-color: rgb(175, 195, 212);
+        }
+        #div2{
+            padding-left: 10px;
+            font-size: 30px;
+            border: 0px;
+            background-color: rgb(147, 186, 218);
+            width: 60px;
+            height: 60px;
+        }
+        #div2:hover{
+            background-color: rgb(87, 114, 136);
+            font-size: 20px;
+        }
+        #div3{
+            display: none;
+            height: 600px;
+            width: 800px;
+            background-color: rgb(175, 195, 212);
+        }
+        #div5{
+            padding-left: 0px;
+            font-size: 17px;
+            border: 0px;
+            background-color: rgb(147, 186, 218);
+            width: 60px;
+            height: 60px;
+            display: none;
+        }
+        #div5:hover{
+            background-color: rgb(87, 114, 136);
+            font-size: 10px;
+        }
+    </style>
+    <script>
+        function openmenu(){
+            var div5 = $('#div5');
+            $("#div2").hide(300);
+            $("#div3").show(300);
+            $(div5).show(300);
+            $(".menu").hide(300);
+            $(".menu1").hide(300);
+        }
+        function closeMenu(){
+            var div2 = $("#div2");
+            $("#div3").hide(300);
+            $(div2).show(300);
+            $(div5).hide(300);
+            $(".menu").show(300);
+            $(".menu1").show(300);
+        }
+    </script>
+    <script src="jquery-3.7.0.js"></script>
+</body>
+</html>
